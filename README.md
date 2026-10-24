@@ -1,3 +1,4 @@
+
 # Costanza
 
 Costanza keeps one small file, `COSTANZA.md`, so the next AI chat can continue a project without re-reading the repository or trusting an unreviewed summary.
