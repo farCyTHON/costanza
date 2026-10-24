@@ -1,0 +1,14 @@
+{
+  "name": "web",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.0.0",
+    "vitest": "1.0.0"
+  }
+}

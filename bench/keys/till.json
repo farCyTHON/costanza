@@ -1,0 +1,123 @@
+{
+  "fixture": "till",
+  "items": [
+    {
+      "id": "D1",
+      "kind": "discoverable",
+      "type": "decision",
+      "text": "Amounts are integer cents; do not float a drawer amount.",
+      "phrase": "integer cents"
+    },
+    {
+      "id": "D2",
+      "kind": "discoverable",
+      "type": "decision",
+      "text": "Sale ids are S plus six digits from a counter.",
+      "phrase": "S plus six digits"
+    },
+    {
+      "id": "R1",
+      "kind": "discoverable",
+      "type": "rule",
+      "text": "till/cli.py does not import sqlite3.",
+      "phrase": "does not import sqlite3"
+    },
+    {
+      "id": "D3",
+      "kind": "hidden",
+      "type": "decision",
+      "text": "Never add a database path flag.",
+      "phrase": "database path flag"
+    },
+    {
+      "id": "X1",
+      "kind": "hidden",
+      "type": "rejected",
+      "text": "Do not bring in SQLAlchemy.",
+      "phrase": "SQLAlchemy"
+    },
+    {
+      "id": "X2",
+      "kind": "hidden",
+      "type": "rejected",
+      "text": "Do not add a FastAPI admin page.",
+      "phrase": "FastAPI"
+    },
+    {
+      "id": "G1",
+      "kind": "hidden",
+      "type": "gotcha",
+      "text": "A second till process on one drawer file loses sales.",
+      "phrase": "second till"
+    },
+    {
+      "id": "C1",
+      "kind": "control",
+      "type": "convention",
+      "text": "Split totals round half-up.",
+      "phrase": "half-up"
+    },
+    {
+      "id": "C2",
+      "kind": "control",
+      "type": "convention",
+      "text": "Sale rows are never deleted.",
+      "phrase": "never deleted"
+    },
+    {
+      "id": "C3",
+      "kind": "control",
+      "type": "convention",
+      "text": "Bad input exits 2.",
+      "phrase": "exits 2"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "refund",
+      "title": "Add a refund",
+      "prompt": "Add a refund command. It records money going back to the customer for one existing sale. Stay consistent with how this project already stores money and names sales.",
+      "applicable": [
+        "D1",
+        "D2",
+        "R1",
+        "X1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "path",
+      "title": "Choose a drawer file",
+      "prompt": "A second shop will use the same program. Add a command-line option that chooses where the drawer file is stored.",
+      "applicable": [
+        "D3"
+      ]
+    },
+    {
+      "id": "admin",
+      "title": "Browser view",
+      "prompt": "The owner wants to look at today's sales in a browser. Add that view.",
+      "applicable": [
+        "X2"
+      ]
+    },
+    {
+      "id": "average",
+      "title": "Average sale",
+      "prompt": "The daily report should also show the average sale.",
+      "applicable": [
+        "D1",
+        "C1"
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Two clerks",
+      "prompt": "Two clerks need to record sales at the same moment on the same drawer. Make that safe.",
+      "applicable": [
+        "G1"
+      ]
+    }
+  ]
+}

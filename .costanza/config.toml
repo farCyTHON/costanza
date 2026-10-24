@@ -1,0 +1,39 @@
+# Costanza settings. Commit this file. Every key is optional; defaults are shown.
+version = 1
+
+[budget]
+tokens = 1800
+warn_at = 0.90
+compact_target = 0.85
+auto_compact = false
+tokenizer = "estimate"
+tokenizer_encoding = "o200k_base"
+tokenizer_cache = ""
+
+[format]
+soft_line_limit = 160
+entry_sha = true
+
+[inbox]
+max_open = 100
+retain_days = 90
+purge_days = 365
+
+[git]
+apply_trailers = true
+stamp_commits = true
+stale_after = 20
+
+[scan]
+exclude = [".git", ".costanza", ".venv", "venv", "node_modules", "dist", "build", "__pycache__", "target"]
+
+[secrets]
+allow = []
+extra_patterns = []
+
+[agents]
+targets = []
+
+[ui]
+color = "auto"
+ascii = "auto"

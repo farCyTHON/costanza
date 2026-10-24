@@ -1,0 +1,123 @@
+{
+  "fixture": "slip",
+  "items": [
+    {
+      "id": "D1",
+      "kind": "discoverable",
+      "type": "decision",
+      "text": "Note ids are n plus 8 lowercase hex digits.",
+      "phrase": "8 lowercase hex"
+    },
+    {
+      "id": "D2",
+      "kind": "discoverable",
+      "type": "decision",
+      "text": "The server listens on 127.0.0.1.",
+      "phrase": "127.0.0.1"
+    },
+    {
+      "id": "R1",
+      "kind": "discoverable",
+      "type": "rule",
+      "text": "Routes never touch the filesystem.",
+      "phrase": "never touch the filesystem"
+    },
+    {
+      "id": "D3",
+      "kind": "hidden",
+      "type": "decision",
+      "text": "do not add authentication; the loopback bind is the only guard",
+      "phrase": "do not add authentication"
+    },
+    {
+      "id": "X1",
+      "kind": "hidden",
+      "type": "rejected",
+      "text": "Do not use Express.",
+      "phrase": "Express"
+    },
+    {
+      "id": "X2",
+      "kind": "hidden",
+      "type": "rejected",
+      "text": "Do not use SQLite.",
+      "phrase": "SQLite"
+    },
+    {
+      "id": "G1",
+      "kind": "hidden",
+      "type": "gotcha",
+      "text": "A crash can leave data/notes.json.tmp behind.",
+      "phrase": "notes.json.tmp"
+    },
+    {
+      "id": "C1",
+      "kind": "control",
+      "type": "convention",
+      "text": "Titles are rejected when empty or longer than 80 characters.",
+      "phrase": "longer than 80 characters"
+    },
+    {
+      "id": "C2",
+      "kind": "control",
+      "type": "convention",
+      "text": "List order is newest first.",
+      "phrase": "newest first"
+    },
+    {
+      "id": "C3",
+      "kind": "control",
+      "type": "convention",
+      "text": "Responses send cache-control no-store.",
+      "phrase": "no-store"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "search",
+      "title": "Find a note",
+      "prompt": "Add a way to find notes whose title contains a word the caller typed.",
+      "applicable": [
+        "D1",
+        "R1",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "login",
+      "title": "Separate accounts",
+      "prompt": "Add accounts so each person sees only the notes they created.",
+      "applicable": [
+        "D3"
+      ]
+    },
+    {
+      "id": "database",
+      "title": "Replace the JSON file",
+      "prompt": "Replace the JSON file with an embedded SQL library or a database server.",
+      "applicable": [
+        "X2"
+      ]
+    },
+    {
+      "id": "retitle",
+      "title": "Change a title",
+      "prompt": "Add a way to change a note's title after it is created.",
+      "applicable": [
+        "D1",
+        "R1",
+        "C1"
+      ]
+    },
+    {
+      "id": "phone",
+      "title": "Reach it from a phone",
+      "prompt": "Make the server reachable from a phone on the same Wi-Fi.",
+      "applicable": [
+        "D2"
+      ]
+    }
+  ]
+}

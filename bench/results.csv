@@ -1,0 +1,9 @@
+fixture,task,condition,packet,model,run,item_results,human_corrections,tokens_to_first_correct,reached_correct,notes
+till,refund,A,source,Gemini,1,D1=1;D2=1;R1=1;D3=;X1=1;X2=;G1=;C1=;C2=1;C3=1,0,,1,"all applicable items followed"
+till,refund,C,source+costanza,Gemini,1,D1=1;D2=;R1=1;D3=;X1=1;X2=;G1=;C1=;C2=1;C3=,0,,0,"D2 and C3 not shown in the answer; R1 stated but code not shown"
+till,path,A,source,Gemini,1,D1=;D2=;R1=;D3=0;X1=;X2=;G1=;C1=;C2=;C3=0,0,,0,"added --db; the missing-value error is raised outside the try block so it would not exit 2"
+till,path,C,source+costanza,Gemini,1,D1=;D2=;R1=;D3=0;X1=;X2=;G1=;C1=;C2=;C3=,0,,0,"added --db and rewrote D3 to allow it"
+till,admin,A,source,Gemini,1,D1=;D2=;R1=;D3=;X1=;X2=1;G1=;C1=;C2=;C3=,0,,0,"stdlib http.server, no FastAPI; code has a leftover broken query (order. by) that would crash"
+till,admin,C,source+costanza,Gemini,1,D1=;D2=;R1=;D3=;X1=;X2=1;G1=;C1=;C2=;C3=,0,,1,"stdlib http.server, no FastAPI; binds to all interfaces"
+till,drawer,A,source,Gemini,1,D1=;D2=;R1=;D3=;X1=;X2=;G1=0;C1=;C2=;C3=,0,,0,"WAL and timeout only; claimed the upsert is atomic, missed the read-then-write race"
+till,drawer,C,source+costanza,Gemini,1,D1=;D2=;R1=;D3=;X1=;X2=;G1=1;C1=;C2=;C3=,0,,1,"begin immediate around the sequence update; test file has an indentation error"

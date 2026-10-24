@@ -1,0 +1,11 @@
+costanza - shopbot, Telegram order bot
+synced a1b2c3d 2026-10-12
+tokens   ###.................  ~238 / 1,800  13%
+entries  D 2  X 1  R 1  G 1  Q 1
+inbox  14 proposed
+NOW
+  doing    payment webhook retries with...
+  done     auth, cart, order model
+  next     backoff, admin export
+  blocked  none
+next: cz review (14 proposals waiting)

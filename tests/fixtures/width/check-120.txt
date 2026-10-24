@@ -1,0 +1,5 @@
+check - COSTANZA.md                                                                                       ~1,666 / 1,800
+! W101  near budget: 93% of 1,800
+! W103  line 22: [files: app/routes/admin.py] matches nothing
+- 0 errors, 2 warnings
+next: cz compact

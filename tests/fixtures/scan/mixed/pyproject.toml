@@ -1,0 +1,7 @@
+[project]
+name = "mixed"
+requires-python = ">=3.11"
+dependencies = ["typer", "pytest"]
+
+[project.scripts]
+mixed = "mixed:main"

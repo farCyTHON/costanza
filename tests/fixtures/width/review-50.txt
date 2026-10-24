@@ -1,0 +1,8 @@
+review - 14 proposed
+1 of 14
+p7  D  cli via cli - 2026-10-12T14:02
+  text   retry webhooks with exponential backoff,
+         max 5 tries and keep going
+  why    provider retries for 24h anyway so we
+         should match that window
+  files  app/services/pay.py
