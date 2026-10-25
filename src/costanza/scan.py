@@ -20,7 +20,7 @@ from costanza.store import mutate_file, read_file
 if sys.version_info >= (3, 11):
     import tomllib
 else:
-    import tomli as tomllib  # type: ignore[import-not-found]
+    import tomli as tomllib  # type: ignore[import-not-found,unused-ignore]
 
 _PY_FRAMEWORKS = (
     ("fastapi", "FastAPI"),

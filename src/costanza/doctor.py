@@ -34,7 +34,7 @@ from costanza.store import archive_texts, mutate_file, read_file, write_ledger
 if sys.version_info >= (3, 11):
     import tomllib
 else:
-    import tomli as tomllib  # type: ignore[import-not-found]  # tomli has no stubs; used on 3.10 only
+    import tomli as tomllib  # type: ignore[import-not-found,unused-ignore]
 
 CHECK_NAMES = (
     "python",
