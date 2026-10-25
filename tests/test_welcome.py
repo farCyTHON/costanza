@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import io
-import re
 import sys
 
 import pytest
@@ -10,9 +9,8 @@ from typer.testing import CliRunner
 from costanza import ui
 from costanza.cli import app
 from costanza.ui import _WELCOME_COMMANDS, HELP_LINE, TAGLINE
-from tests.helpers import InvokeFn
+from tests.helpers import InvokeFn, strip_ansi
 
-_ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
 _FIVE = ("init", "decide", "review", "handoff", "paste")
 
 
@@ -30,7 +28,7 @@ class _Tty(io.StringIO):
 
 
 def _visible(text: str) -> list[str]:
-    return [_ANSI.sub("", line) for line in text.splitlines()]
+    return strip_ansi(text).splitlines()
 
 
 def test_welcome_exits_0_and_plain_lists_commands(invoke: InvokeFn) -> None:
