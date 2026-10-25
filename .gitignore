@@ -20,3 +20,6 @@ COSTANZA.md.bak
 bench/generated/
 bench/fixtures/till/.git/
 bench/fixtures/slip/.git/
+
+.venv*/
+.hypothesis/

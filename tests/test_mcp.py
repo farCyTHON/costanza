@@ -10,10 +10,13 @@ from collections.abc import Awaitable, Callable
 from pathlib import Path
 
 import pytest
-from mcp import Client
-from mcp.client.stdio import StdioServerParameters
-from mcp.types import Implementation
-from mcp_types import CallToolResult
+
+pytest.importorskip("mcp")
+
+from mcp import Client  # noqa: E402
+from mcp.client.stdio import StdioServerParameters  # noqa: E402
+from mcp.types import Implementation  # noqa: E402
+from mcp_types import CallToolResult  # noqa: E402
 
 from costanza.inbox import load_inbox
 from costanza.paths import ProjectPaths
