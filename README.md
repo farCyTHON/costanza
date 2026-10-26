@@ -1,3 +1,10 @@
+  ![CI](https://github.com/farCyTHON/costanza/actions/workflows/ci.yml/badge.svg)
+  ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)
+  ![License](https://img.shields.io/badge/license-MIT-green)
+
+<p align="center">
+  <img src="docs/welcome.png" alt="Costanza welcome screen" width="720">
+</p>
 
 # Costanza
 
@@ -21,9 +28,8 @@ run: node src/server.js
 layout: src/server.js (http), src/routes.js (handlers), src/store.js (files), src/ids.js (ids)
 synced: local 2026-01-27
 
-## NOW
-```
 
+```
 ## 30-second demo
 
 From a new directory:
